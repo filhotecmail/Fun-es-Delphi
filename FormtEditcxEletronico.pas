@@ -1,3 +1,18 @@
+{--------------------------------------------------------------------------
+  Formata o valor do Edit como a Escrita Bancária.
+  Começa a escrever da direita para esquerda, sem precisar digitar 
+  ponto, vírgula.
+  
+  Posiciona o Cursor sempre no final da String.
+---------------------------------------------------------------------------}
+
+procedure Edit.KeyPress(Sender: TObject; var Key: Char);
+begin
+  if NOT CharinSet(Key , ['0'..'9', char(VK_BACK), Char(VK_DELETE)]) then
+      key := #0;
+
+end;
+
 procedure Edit.OnChange(Sender: TObject);
  var
   LText: string;
