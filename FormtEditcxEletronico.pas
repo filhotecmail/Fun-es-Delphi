@@ -1,5 +1,3 @@
-```Delphi
-
 procedure Edit.OnChange(Sender: TObject);
  var
   LText: string;
@@ -31,4 +29,3 @@ begin
  LComponent.selstart := length(LComponent.Text);
 
 end;
-```
